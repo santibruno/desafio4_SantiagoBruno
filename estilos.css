@@ -1,0 +1,329 @@
+/*Estilos Generales*/
+*{
+    margin: 0px;
+    padding: 0;
+    background-color: lightsalmon;
+    font-family: "AbrilFatface-Regular",sans-serif;
+    
+}
+@font-face {
+    font-family: "AbrilFatface-Regular";
+    src: url("fonts/AbrilFatface-Regular.ttf");
+}
+@font-face {
+    font-family: "Anton-Regular";
+    src: url("fonts/Anton-Regular.ttf");
+}
+body{
+    overflow-x: hidden;
+}
+#header{
+    grid-area: cabeza;
+    font-family: "AbrilFatface-Regular",sans-serif;      
+    padding: 10px;
+    text-align: center;
+    color: rgb(43, 42, 42);
+}
+
+#footer{
+    grid-area: pie;
+    position:relative;    
+    text-align: center;    
+    top: 4rem;
+}
+#img{
+    grid-area: banner;
+    border: solid 5px black;       
+    width: 99%;
+}
+#section1{
+    grid-area: servicios;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+/*Desktop */
+@media (min-width: 601px){
+    body{
+        height: 100vh;
+
+    }           
+    .border{
+        border: inset 2px black;
+    }
+    .menu{
+        grid-area: menu;
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        padding: 10px;
+    }
+    span{
+        background-color:rgb(177, 123, 101);
+        margin-left: 5px;
+        padding: 20px;
+        width: 100%;
+        height: 10px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    span:hover{
+        background-color: rgb(241, 195, 195);   
+    }
+    a{
+        width: 100%;
+        background-color: transparent;
+        text-decoration-line: none;
+        color: black;
+    }  
+    .article1{
+        height: 12vh;
+        width: 100px;
+        border-radius: 100%;        
+        text-align: center;
+        margin: 0px;
+        font-size: 1rem;
+        background-color: tomato;        
+        padding: 50px;
+        
+    }  
+    .section{
+        display: flex;
+        flex-direction: row ;
+        flex-wrap: wrap;     
+        justify-content: space-between;   
+    }
+    p{
+        background-color: transparent;
+    }
+        .border{
+        border: inset 2px black;
+    }
+    #gridAreasIndex {
+        display: grid;
+        /* grid por areas */
+        grid-template-areas:
+        /* 1 columnas y 5 filas */
+        "cabeza "/* fila 1 */
+        "menu "
+        "banner "        
+        "servicios "/* fila 3 */
+        "pie "/* fila 4 */
+        ;
+        /* Dimensiones */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 15vh 5fr 1fr 1fr;
+        grid-row-gap: 0;
+        }
+
+      /*----*/
+    .section2{
+        grid-area: productos;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .marcoImg{
+        background-color: rgba(136, 134, 134, 0.596);    
+        height: 100%;
+        width: 30%;
+        display: inline-block;
+        text-align: center;
+        padding: 5px 5px;
+        margin: 10px;
+        
+    }
+    .description{
+        color: white;
+        background-color: transparent;
+        padding-top: 5px;
+    }
+    .imgProducto{
+        width: 90%;
+        margin-top: 10px;
+    }
+    
+    #gridAreasProductos {
+        display: grid;
+        /* grid por areas */
+        grid-template-areas:
+        /* 1 columnas y 5 filas */
+        "cabeza "/* fila 1 */
+        "menu "     
+        "productos "/* fila 3 */
+        "pie "/* fila 4 */
+        ;
+        /* Dimensiones */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
+        grid-row-gap: 0;
+    }
+}
+
+@media (max-width:600px){
+    body {
+        height: 100vh;
+    }
+        .header{
+        grid-area: cabeza;
+        font-family: "AbrilFatface-Regular",sans-serif;      
+        padding: 10px;
+        text-align: center;
+        color: rgb(43, 42, 42);
+    }
+    span {
+        display: flex;
+        flex-direction: column ;
+        background-color: rgb(58, 51, 51);
+        margin-bottom: 5px;
+        padding: 20px;
+        height: 10px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    span:hover {
+        background-color: black;
+        color: orange;
+    } 
+    a{
+        width: 100%;
+        background-color: transparent;
+        text-decoration-line: none;
+        color: rgb(248, 241, 241);
+    }   
+    .article1{
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;        
+        text-align: center;        
+        font-size: 1rem;
+        background-color:rgb(241, 136, 168);        
+        padding: 50px;
+        margin-bottom: 50px;
+        
+    }  
+    .section{
+        padding: 10px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    p{
+        background-color: transparent;
+        color:white
+    }
+
+    
+    /*Grid Por Areas Mobile*/
+    
+    #gridAreasIndex{
+        display: grid;
+        grid-template-areas: 
+        /*1 columnas y 5 filas*/
+        "cabeza"
+        "banner"
+        "menu"
+        "servicios" 
+        "pie"        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 2fr 1fr 2fr 1fr 1fr 1fr;
+        grid-row-gap: 0;
+    }
+
+    
+    .section2{
+        grid-area: productos;
+        padding: 10px;
+        margin: 10px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .marcoImg{
+        background-color: rgba(136, 134, 134, 0.596);    
+        height: 100%;
+        width: 90%;
+        display: inline-block;
+        text-align: center;
+        padding: 5px 5px;
+        margin: 10px;
+        
+    }
+    .description{
+        color: white;
+        background-color: transparent;
+        padding-top: 5px;
+    }
+    .imgProducto{
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    #gridAreasProductos {
+        display: grid;
+        /* grid por areas */
+        grid-template-areas:
+        /* 1 columnas y 5 filas */
+        "cabeza "/* fila 1 */
+        "menu "     
+        "productos "/* fila 3 */
+        "pie "/* fila 4 */
+        ;
+        /* Dimensiones */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
+        grid-row-gap: 0;
+    }
+
+}
+
+
+
+
+/*------------------------------------------------------*/
+
+
+
+.marcoContacto{
+    background-color: rgba(136, 134, 134, 0.596);    
+    height: 500px;
+    width: 500px;
+    padding-right: 50px;
+    display: inline-block;
+    text-align:right;
+    padding-top: 3px;
+}
+
+
+
+.titulos{
+    padding: 10px;
+}
+
+.textoContacto{
+    color: white;
+    background-color: transparent;
+    padding-top: 5px;
+}
+
+.inputContacto{
+    background-color: white;
+    padding: 5px;
+    color: black;
+    
+}
+.button{
+    background-color: black;
+    color: salmon;
+}
+
+
+footer h3{
+    font-size: 75%;
+    padding: 20px;
+}
